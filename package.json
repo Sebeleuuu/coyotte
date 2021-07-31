@@ -8,9 +8,6 @@
     "discord.js": "^12.5.3"
   },
   "devDependencies": {},
-  "scripts": {
-    "start": "node index.js"
-  },
   "author": "Sebeleuuu",
   "license": "ISC"
 }
