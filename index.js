@@ -53,13 +53,19 @@ bot.on('message', message => {
 
             } else {
 
-                const error = new Discord.MessageEmbed()
-                .setColor('#ff0000')
-                .setTitle('Protection')
-                .setDescription("<a:cross3Coyotte:870301760844087316> " + message.author.tag + ", merci de mettre vos photos dans le salon approprié ! <#868828315971096646>")
-    
-                message.channel.send(error).then(msg=> msg.delete({timeout:"7000"}));
-                message.delete();
+                if(message.author.id === '829395154855133237') {
+
+                } else {
+
+                    const error = new Discord.MessageEmbed()
+                    .setColor('#ff0000')
+                    .setTitle('Protection')
+                    .setDescription("<a:cross3Coyotte:870301760844087316> " + message.author.tag + ", merci de mettre vos photos dans le salon approprié ! <#868828315971096646>")
+        
+                    message.channel.send(error).then(msg=> msg.delete({timeout:"7000"}));
+                    message.delete();
+                    
+                }
 
             }
 
@@ -107,8 +113,16 @@ bot.on('message', message => {
 
                 const guildMember = bot.guilds.cache.get("868826680817504267");
                 let role = guildMember.roles.cache.get('870290993335914547');
+                let role2 = guildMember.roles.cache.get('871184278451527740');
+                let role3 = guildMember.roles.cache.get('871184463726542932');
+                let role4 = guildMember.roles.cache.get('871184787442892800');
+                let role5 = guildMember.roles.cache.get('871185844193603624');
                 
                 message.member.roles.add(role).catch(console.error);
+                message.member.roles.add(role2).catch(console.error);
+                message.member.roles.add(role3).catch(console.error);
+                message.member.roles.add(role4).catch(console.error);
+                message.member.roles.add(role5).catch(console.error);
 
                 const welcome = new Discord.MessageEmbed()
                 .setColor('#c5a346')
